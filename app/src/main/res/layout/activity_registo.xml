@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registo">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/registotxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Registo de Utilizador"
+            android:textAlignment="center"
+            android:textSize="30pt" />
+
+        <EditText
+            android:id="@+id/registoctxlogin"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edit"
+            android:drawableStart="@drawable/ic_baseline_account_circle_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Insira o seu login"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/registoctxemail"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edit"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Insira o seu email"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/registoctxpass"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edit"
+            android:drawableStart="@drawable/ic_baseline_key_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Insira a sua senha"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/registoctxrepass"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edit"
+            android:drawableStart="@drawable/ic_baseline_key_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Reescreva a sua senha"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/bt3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/teal_700"
+            android:onClick="fazRegisto"
+            android:text="Registar"
+            android:textSize="12pt"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/bt4"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/teal_700"
+            android:onClick="voltar"
+            android:text="Voltar"
+            android:textSize="10pt"
+            app:cornerRadius="20dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

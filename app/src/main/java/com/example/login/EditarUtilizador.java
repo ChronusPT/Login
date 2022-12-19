@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class EditarUtilizador extends AppCompatActivity {
 
@@ -20,7 +21,8 @@ public class EditarUtilizador extends AppCompatActivity {
         setContentView(R.layout.activity_editar_utilizador);
 
         it = getIntent();
-        id = it.getExtras().getInt ("Id");
+        //Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
+        id = it.getExtras().getInt ("id");
 
         etlogin = findViewById(R.id.eregistoctxlogin);
         etemail = findViewById(R.id.eregistoctxemail);
@@ -28,11 +30,13 @@ public class EditarUtilizador extends AppCompatActivity {
         etrepass = findViewById(R.id.eregistoctxrepass);
 
         db = new DBHelper(this);
-        Cursor c = db.editaDados(id);
-        etlogin.setText(c.getColumnIndex("Login"));
-        etemail.setText(c.getColumnIndex("email"));
-        etpassword.setText(c.getColumnIndex("password"));
-        etrepass.setText("password");
+        String valores [] = new String[3];
+        valores = db.editaDados(id);
+
+        etlogin.setText(valores[0]);
+        etemail.setText(valores[1]);
+        etpassword.setText(valores[2]);
+        etrepass.setText(valores[2]);
 
     }
 }

@@ -59,4 +59,9 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         return db.delete("utilizador", "id=?", new String[]{String.valueOf(id)});
     }
+
+    public Cursor editaDados(int id){
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM utilizador WHERE id = ?", new String[]{String.valueOf(id)});
+        return c;}
 }

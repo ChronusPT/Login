@@ -32,4 +32,11 @@ public class MostraUtilizadores extends AppCompatActivity {
             Toast.makeText(this, "Problemas ao eliminar o registo", Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void editar(View v){
+        it = new Intent(MostraUtilizadores.this, EditarUtilizador.class);
+        it.putExtra("id",id);
+        startActivity(it);
+        finish();
+    }
 }
